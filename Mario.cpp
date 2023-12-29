@@ -5,7 +5,7 @@
 #include "Character.h"
 extern Map map;
 Mario::Mario(sf::Vector2f position) : speed(300), jumpVelocity(-700), verticalVelocity(0), gravity(1000),
-isOnTheGround(false), directionOfMario(false){ //, runAnimation(.45f)
+isOnTheGround(false), directionOfMario(false){
     floatRect = sf::FloatRect(position.x, position.y, 60, 60);
 }
 sf::FloatRect Mario::getFloatRect() {
