@@ -5,25 +5,6 @@ Map::Map(){
     sprite.setTexture(texture);
     sprite.setScale((double)CELL_SIZE / texture.getSize().x, (double)CELL_SIZE / texture.getSize().y);
 }
-/*void Map::CreateDefaultMap(int length){
-    for(int i = 0; i < length; i++){
-        Column col = Column();
-        col[col.size() -1] = true;
-        grid.push_back(col);
-    }
-}*/
-/*void Map::LoadFromImageFile(const char* fileName) {
-    sf::Image image;
-    image.loadFromFile(fileName);
-    for(int x = 0; x < texture.getSize().x; x++){
-        Column col;
-        for(int y = 0; y < texture.getSize().y; y++){
-            sf::Color pixelColor = image.getPixel(x, y);
-            col.push_back(pixelColor == sf::Color::Black);
-        }
-        grid.push_back(col);
-    }
-}*/
 sf::Vector2f Map::LoadFromImageFile(const char *fileName){
     sf::Vector2f marioPosition(50, 50);
     sf::Image image;
