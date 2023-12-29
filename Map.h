@@ -5,14 +5,13 @@
 typedef std::vector<bool> Column;
 typedef std::vector<Column> Grid;
 struct CollisionResult{
-    bool collisonCheck = false; //sprawdzenie czy dotyka czego kolwiek
-    bool groundCheck = false; //sprawdzenie czy dotyka podlogi
+    bool collisonCheck = false;
+    bool groundCheck = false;
 };
 class Map {
 public:
     Map();
     sf::Vector2f LoadFromImageFile(const char* fileName);
-//    void LoadFromImageFile(const char* fileName);
     void Draw(sf::RenderWindow& window);
     CollisionResult CheckCollision(float x, float y, float width, float height);
 private:
