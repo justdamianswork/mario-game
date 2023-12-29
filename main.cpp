@@ -10,7 +10,6 @@ auto main() -> int{
     sf::RenderWindow window(sf::VideoMode(900, 700), "Mario");
     sf::Clock clock;
     sf::View view = window.getDefaultView();
-//    map.LoadFromImageFile("../images/marioMap.png");
     mario = Mario(map.LoadFromImageFile("../images/marioMap.png"));
     mario.Init();
     clock.restart();
@@ -23,7 +22,6 @@ auto main() -> int{
             }
         }
         mario.Update(time.asSeconds());
-//        clock.restart();
         view.setCenter(mario.getFloatRect().left, mario.getFloatRect().top);
         window.setView(view);
         window.clear(sf::Color(135, 206, 235));
